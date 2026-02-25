@@ -1,0 +1,264 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background:
+        radial-gradient(circle at 20% 10%, rgba(255,255,255,0.24), transparent 35%),
+        linear-gradient(135deg, #3f72f2, #1fa8a0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    width: 460px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.5);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.22);
+    text-align: center;
+    backdrop-filter: blur(4px);
+}
+
+h2 {
+    margin: 0 0 6px;
+    color: #1d2b48;
+    letter-spacing: 0.3px;
+}
+
+.subtitle {
+    margin: 0 0 18px;
+    color: #5b657b;
+    font-size: 13px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input {
+    width: 48%;
+    padding: 9px 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #d7deea;
+    font-size: 14px;
+    box-sizing: border-box;
+    background: #f9fbff;
+}
+
+.phone-input {
+    width: 100%;
+}
+
+.full-input {
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4e7cf5;
+    box-shadow: 0 0 0 3px rgba(78,124,245,0.15);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: linear-gradient(90deg, #4f7df7, #2d66f2);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(45,102,242,0.32);
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #1d2b48;
+}
+
+.history {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.history h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #1d2b48;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.action-buttons button {
+    width: auto;
+    margin: 0;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 8px;
+    box-shadow: none;
+    transform: none;
+}
+
+.excel-btn {
+    background: #2563eb;
+}
+
+.excel-btn:hover {
+    background: #1d4ed8;
+    box-shadow: none;
+}
+
+.save-btn {
+    background: #0f766e;
+}
+
+.save-btn:hover {
+    background: #0d645d;
+    box-shadow: none;
+}
+
+.share-btn {
+    background: #1db954;
+}
+
+.share-btn:hover {
+    background: #169e46;
+    box-shadow: none;
+}
+
+.clear-btn {
+    background: #e55353;
+}
+
+.clear-btn:hover {
+    background: #c73e3e;
+    box-shadow: none;
+}
+
+.excel-status {
+    margin: 0 0 10px;
+    color: #374151;
+    font-size: 12px;
+}
+
+.excel-status.error {
+    color: #b91c1c;
+}
+
+.table-wrap {
+    max-height: 220px;
+    overflow-y: auto;
+    border: 1px solid #e6ebf5;
+    border-radius: 10px;
+    background: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+th, td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #eef2fa;
+    text-align: left;
+    white-space: nowrap;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background: #f4f7ff;
+    z-index: 1;
+    color: #2e3a59;
+}
+
+.empty {
+    color: #777;
+    font-style: italic;
+}
+
+.delete-btn {
+    margin: 0;
+    width: auto;
+    padding: 5px 8px;
+    font-size: 11px;
+    border-radius: 7px;
+    background: #ef4444;
+    box-shadow: none;
+    transform: none;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+    box-shadow: none;
+}
+
+.total-volume {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #1d2b48;
+    text-align: right;
+    background: #f3f7ff;
+    border-radius: 8px;
+    padding: 8px 10px;
+}
+
+.section-title {
+    margin: 26px 0 10px;
+    text-align: left;
+    font-size: 16px;
+    color: #1d2b48;
+}
+
+@media (max-width: 520px) {
+    .container {
+        width: 100%;
+        padding: 22px;
+    }
+
+    .history-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .action-buttons {
+        width: 100%;
+    }
+
+    .action-buttons button {
+        flex: 1;
+    }
+}
