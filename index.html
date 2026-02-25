@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cylinder Volume Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Cylinder Volume Calculator</h2>
+    <p class="subtitle">Save multiple records and share the report with customers</p>
+
+    <div class="input-group">
+        <label>Customer Name</label><br>
+        <input type="text" id="customerName" class="full-input" placeholder="Enter customer name">
+    </div>
+
+    <div class="input-group">
+        <label>Customer WhatsApp Number</label><br>
+        <input type="text" id="customerPhone" class="phone-input" placeholder="e.g. 919876543210">
+    </div>
+
+    <div class="input-group">
+        <label>Customer Address</label><br>
+        <input type="text" id="customerAddress" class="full-input" placeholder="Enter customer address">
+    </div>
+
+    <div class="input-group">
+        <label>Circumference</label><br>
+        <input type="number" id="cFeet" placeholder="Feet">
+        <input type="number" id="cInches" placeholder="Inches">
+    </div>
+
+    <div class="input-group">
+        <label>Height</label><br>
+        <input type="number" id="hFeet" placeholder="Feet">
+        <input type="number" id="hInches" placeholder="Inches">
+    </div>
+
+    <button onclick="calculateVolume()">Calculate Volume</button>
+
+    <div class="result" id="result"></div>
+
+    <div class="history">
+        <div class="history-header">
+            <h3>Saved Calculations</h3>
+            <div class="action-buttons">
+                <button class="excel-btn" onclick="connectExcelFile()">Connect Excel</button>
+                <button class="save-btn" onclick="saveCustomerDataOnly()">Save Customer</button>
+                <button class="share-btn" onclick="shareOnWhatsApp()">Share WhatsApp</button>
+                <button class="clear-btn" onclick="clearHistory()">Clear History</button>
+            </div>
+        </div>
+        <div class="excel-status" id="excelStatus">Excel: Not connected</div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Circumference</th>
+                        <th>Height</th>
+                        <th>Volume (ft^3)</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="historyBody"></tbody>
+            </table>
+        </div>
+        <div class="total-volume" id="totalVolume">Total Volume: 0.000 ft^3</div>
+    </div>
+
+    <h3 class="section-title">Customer History</h3>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>WhatsApp</th>
+                    <th>Address</th>
+                    <th>Total (ft^3)</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="customerHistoryBody"></tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
